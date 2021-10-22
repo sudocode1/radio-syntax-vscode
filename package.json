@@ -1,0 +1,27 @@
+{
+    "name": "radio-language-support",
+    "displayName": "Radio Language Support",
+    "description": "Syntax highlighting for Radio",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "radio",
+            "aliases": ["Radio", "radio"],
+            "extensions": [".radio"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "radio",
+            "scopeName": "source.radio",
+            "path": "./syntaxes/radio.tmLanguage.json"
+        }]
+    },
+    "publisher": "sudocode1",
+    "repository": "https://github.com/sudocode1/radio-syntax-vscode"
+}

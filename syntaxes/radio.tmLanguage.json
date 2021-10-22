@@ -1,0 +1,66 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Radio",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.radio",
+					"match": "\\b(if|elif|else if|else|while|for|return|end)\\b"
+				},
+				{
+					"name": "keyword.control.radio",
+					"match": "@endstructure|@incl"
+				},
+				{
+					"name": "comment",
+					"match": "[;;].*"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "@call|@!call|@intout|@strout|@floatout|@redefine|out!|out|@struct_access_property|@create_struct|@nl"
+				},
+				{
+					"name": "storage.type.primitive.cpp",
+					"match": "@int|@str|@float|@double"
+				},
+				{
+					"name": "storage.type.primitive.cpp",
+					"match": "\\b(str|void|int|float|double)\\b"
+				},
+				{
+					"name": "storage.type.function.js",
+					"match": "@define|@!define"
+				},
+				{
+					"name": "variable.parameter.js",
+					"match": "@param|@finalparam|@property"
+				},
+				{
+					"name": "storage.type.struct.cpp",
+					"match": "@structure"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.radio",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.radio",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.radio"
+}
